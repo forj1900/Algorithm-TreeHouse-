@@ -1,25 +1,108 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="oeX-SV-9lT">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Playlist-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PlaylistMasterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="coffee" translatesAutoresizingMaskIntoConstraints="NO" id="ESR-MR-sc7">
+                                <rect key="frame" x="60" y="106" width="200" height="200"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="N8H-kU-A8m"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zaf-3G-uZm">
+                                <rect key="frame" x="137" y="314" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="zAt-ry-nit" kind="push" identifier="showPlaylistDeteil" id="g8o-fc-slX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Zaf-3G-uZm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="74R-bx-imc"/>
+                            <constraint firstItem="ESR-MR-sc7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oYb-A0-yeh"/>
+                            <constraint firstItem="ESR-MR-sc7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pCi-oA-1iG"/>
+                            <constraint firstItem="Zaf-3G-uZm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x3Z-7q-wgF"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Playlist" id="nKv-5t-NS8"/>
+                    <connections>
+                        <outlet property="aButton" destination="Zaf-3G-uZm" id="QfK-zd-D7n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="492" y="246"/>
+        </scene>
+        <!--Artists-->
+        <scene sceneID="0Df-RA-tVA">
+            <objects>
+                <viewController id="zAt-ry-nit" customClass="PlaylistDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pgG-fP-hW3"/>
+                        <viewControllerLayoutGuide type="bottom" id="qN8-io-6mU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZoQ-Wi-SP6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't pressed the button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8B-99-Prd">
+                                <rect key="frame" x="41" y="274" width="238" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="c8B-99-Prd" firstAttribute="centerX" secondItem="ZoQ-Wi-SP6" secondAttribute="centerX" id="KKV-72-DVd"/>
+                            <constraint firstItem="c8B-99-Prd" firstAttribute="centerY" secondItem="ZoQ-Wi-SP6" secondAttribute="centerY" id="muG-ku-imh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Artists" id="Tpb-cU-7uq"/>
+                    <connections>
+                        <outlet property="buttonPressLabel" destination="c8B-99-Prd" id="SXv-Dt-KD0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rpR-ro-y4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869" y="246"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NTF-lP-WfE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oeX-SV-9lT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H0w-IB-2Hh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Q1E-qN-SXp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Dr-dV-reG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-40" y="246"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="coffee" width="53" height="107"/>
+    </resources>
 </document>
