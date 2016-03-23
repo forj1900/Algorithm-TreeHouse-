@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.aButton setTitle:@"Press me" forState:UIControlStateNormal];
+    [self.aButton setTitle:@"You pressed me!" forState:UIControlStateHighlighted];//немного отсебятины
+
 
 }
 
