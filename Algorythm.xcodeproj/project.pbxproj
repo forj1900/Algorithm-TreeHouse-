@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1004A801CAC78B500E78E5E /* Playlist.m in Sources */ = {isa = PBXBuildFile; fileRef = C1004A7F1CAC78B500E78E5E /* Playlist.m */; };
 		C1C23B0E1C20E10D0095C466 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C23B0D1C20E10D0095C466 /* main.m */; };
 		C1C23B111C20E10D0095C466 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C23B101C20E10D0095C466 /* AppDelegate.m */; };
 		C1C23B141C20E10D0095C466 /* PlaylistMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C23B131C20E10D0095C466 /* PlaylistMasterViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C1004A7E1CAC78B500E78E5E /* Playlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Playlist.h; sourceTree = "<group>"; };
+		C1004A7F1CAC78B500E78E5E /* Playlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Playlist.m; sourceTree = "<group>"; };
 		C1C23B091C20E10D0095C466 /* Algorythm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorythm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C23B0D1C20E10D0095C466 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C1C23B0F1C20E10D0095C466 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,11 +117,13 @@
 				C1C23B131C20E10D0095C466 /* PlaylistMasterViewController.m */,
 				C1C23B3F1C20EB020095C466 /* PlaylistDetailViewController.h */,
 				C1C23B401C20EB020095C466 /* PlaylistDetailViewController.m */,
+				C1F7A7BF1C25E5D1005A0228 /* MusicLibrary.h */,
+				C1F7A7C01C25E5D1005A0228 /* MusicLibrary.m */,
+				C1004A7E1CAC78B500E78E5E /* Playlist.h */,
+				C1004A7F1CAC78B500E78E5E /* Playlist.m */,
 				C1C23B181C20E10E0095C466 /* Assets.xcassets */,
 				C1C23B1D1C20E10E0095C466 /* Info.plist */,
 				C1C23B0C1C20E10D0095C466 /* Supporting Files */,
-				C1F7A7BF1C25E5D1005A0228 /* MusicLibrary.h */,
-				C1F7A7C01C25E5D1005A0228 /* MusicLibrary.m */,
 				C1C23B1A1C20E10E0095C466 /* LaunchScreen.storyboard */,
 			);
 			path = Algorythm;
@@ -284,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1C23B141C20E10D0095C466 /* PlaylistMasterViewController.m in Sources */,
+				C1004A801CAC78B500E78E5E /* Playlist.m in Sources */,
 				C1C23B411C20EB020095C466 /* PlaylistDetailViewController.m in Sources */,
 				C1C23B111C20E10D0095C466 /* AppDelegate.m in Sources */,
 				C1C23B0E1C20E10D0095C466 /* main.m in Sources */,
