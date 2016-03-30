@@ -107,19 +107,19 @@
 		C1C23B0B1C20E10D0095C466 /* Algorythm */ = {
 			isa = PBXGroup;
 			children = (
+				C1C23B151C20E10D0095C466 /* Main.storyboard */,
 				C1C23B0F1C20E10D0095C466 /* AppDelegate.h */,
 				C1C23B101C20E10D0095C466 /* AppDelegate.m */,
 				C1C23B121C20E10D0095C466 /* PlaylistMasterViewController.h */,
 				C1C23B131C20E10D0095C466 /* PlaylistMasterViewController.m */,
 				C1C23B3F1C20EB020095C466 /* PlaylistDetailViewController.h */,
 				C1C23B401C20EB020095C466 /* PlaylistDetailViewController.m */,
-				C1C23B151C20E10D0095C466 /* Main.storyboard */,
 				C1C23B181C20E10E0095C466 /* Assets.xcassets */,
-				C1C23B1A1C20E10E0095C466 /* LaunchScreen.storyboard */,
 				C1C23B1D1C20E10E0095C466 /* Info.plist */,
 				C1C23B0C1C20E10D0095C466 /* Supporting Files */,
 				C1F7A7BF1C25E5D1005A0228 /* MusicLibrary.h */,
 				C1F7A7C01C25E5D1005A0228 /* MusicLibrary.m */,
+				C1C23B1A1C20E10E0095C466 /* LaunchScreen.storyboard */,
 			);
 			path = Algorythm;
 			sourceTree = "<group>";

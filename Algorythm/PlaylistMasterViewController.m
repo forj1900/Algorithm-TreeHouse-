@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.aButton setTitle:@"Press me" forState:UIControlStateNormal];
+    [self.bButton setTitle:@"Press me too!" forState:UIControlStateNormal];
 
 }
 
