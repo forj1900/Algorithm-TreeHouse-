@@ -17,31 +17,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="coffee" translatesAutoresizingMaskIntoConstraints="NO" id="ESR-MR-sc7">
-                                <rect key="frame" x="60" y="106" width="200" height="200"/>
-                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="N8H-kU-A8m"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zaf-3G-uZm">
-                                <rect key="frame" x="137" y="314" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zaf-3G-uZm">
+                                <rect key="frame" x="137" y="269" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="zAt-ry-nit" kind="push" identifier="showPlaylistDeteil" id="g8o-fc-slX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9M-aP-5lr">
+                                <rect key="frame" x="53" y="328" width="214" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="zAt-ry-nit" kind="push" identifier="showPlaylistDeteil2" id="pCH-tt-kXC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Zaf-3G-uZm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="74R-bx-imc"/>
-                            <constraint firstItem="ESR-MR-sc7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oYb-A0-yeh"/>
-                            <constraint firstItem="ESR-MR-sc7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pCi-oA-1iG"/>
+                            <constraint firstItem="Zaf-3G-uZm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="me0-aF-GR2"/>
                             <constraint firstItem="Zaf-3G-uZm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x3Z-7q-wgF"/>
+                            <constraint firstItem="Zaf-3G-uZm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xUb-f0-Eqc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Playlist" id="nKv-5t-NS8"/>
                     <connections>
                         <outlet property="aButton" destination="Zaf-3G-uZm" id="QfK-zd-D7n"/>
+                        <outlet property="bButton" destination="I9M-aP-5lr" id="hY5-1i-xwl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,6 +65,12 @@
                                 <rect key="frame" x="41" y="274" width="238" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTk-h9-goL">
+                                <rect key="frame" x="139" y="337" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -102,7 +109,7 @@
             <point key="canvasLocation" x="-40" y="246"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="coffee" width="53" height="107"/>
-    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="g8o-fc-slX"/>
+    </inferredMetricsTieBreakers>
 </document>
