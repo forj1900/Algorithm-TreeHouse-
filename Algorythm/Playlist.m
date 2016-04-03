@@ -7,7 +7,7 @@
 //
 
 #import "Playlist.h"
-#import <MusicLibrary.h>
+#import "MusicLibrary.h"
 
 @implementation Playlist
 
@@ -22,8 +22,31 @@
         _playlistTitle = [playlistDictionary objectForKey:kTitle];
         _playlistDescription = [playlistDictionary objectForKey:kDescription];
         
+        NSString *iconName = [playlistDictionary objectForKey: kIcon];
+        _playlistIcon = [UIImage imageNamed:iconName];
+        
+        NSString *largeIconName = [playlistDictionary objectForKey: kLargeIcon];
+        _playlistIconLarge = [UIImage imageNamed:largeIconName];
+        
+        _playlistArtists = [NSArray arrayWithArray:[playlistDictionary objectForKey: kArtists]];
+        
+        NSDictionary *colorDictionary = [playlistDictionary objectForKey:kBackgroundColor];
+        _backgroundColor = [self rgbColorFromDictionary:colorDictionary];
+        
     }
     return self;
 }
 
+
+- (UIColor *) rgbColorFromDictionary: (NSDictionary *) colorDictionary {
+    CGFloat red = [[colorDictionary objectForKey:@"red"] doubleValue];
+    CGFloat green = [[colorDictionary objectForKey:@"green"] doubleValue];
+    CGFloat blue = [[colorDictionary objectForKey:@"blue"] doubleValue];
+    CGFloat alfa = [[colorDictionary objectForKey:@"alfa"] doubleValue];
+    
+    return [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:alfa];
+
+    
+    
+}
 @end

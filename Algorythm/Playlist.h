@@ -18,9 +18,8 @@
 @property (strong, nonatomic) UIImage *playlistIconLarge;
 @property (strong, nonatomic) NSArray *playlistArtists;
 @property (strong, nonatomic) UIColor *playlistColor;
+@property (strong, nonatomic) NSString *backgroundColor;
 
-
-
-
+- (instancetype) initWithIndex: (NSUInteger) index;
 
 @end
