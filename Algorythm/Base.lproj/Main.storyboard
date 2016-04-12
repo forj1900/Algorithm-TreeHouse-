@@ -30,6 +30,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Playlist" id="nKv-5t-NS8"/>
                     <connections>
+                        <outlet property="playlistImageView0" destination="LwE-EL-lkW" id="aDU-VH-55M"/>
                         <segue destination="zAt-ry-nit" kind="push" identifier="showPlaylistDetail" id="Ags-BU-7Tf"/>
                     </connections>
                 </viewController>

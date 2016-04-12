@@ -12,6 +12,5 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *playlistImageView0;
 
-
 @end
 
