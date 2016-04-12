@@ -34,12 +34,16 @@
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqual:@"showPlaylistDeteil"]) {
+    if ([segue.identifier isEqual:@"showPlaylistDetail"]) {
         PlaylistDetailViewController *playlistDetailViewController = (PlaylistDetailViewController *) segue.destinationViewController;
         playlistDetailViewController.playlist = [[Playlist alloc] initWithIndex:0];
         
     }
 }
 
+- (IBAction)showPlaylistDetail:(id)sender {
+    [self performSegueWithIdentifier:@"showPlaylistDetail" sender:sender];
+
+}
 
 @end
