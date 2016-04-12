@@ -8,6 +8,8 @@
 
 #import "PlaylistMasterViewController.h"
 #import "PlaylistDetailViewController.h"
+#import "Playlist.h"
+
 
 @interface PlaylistMasterViewController ()
 
@@ -17,8 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.aButton setTitle:@"Press me" forState:UIControlStateNormal];
-    [self.aButton setTitle:@"You pressed me!" forState:UIControlStateHighlighted];//немного отсебятины
+    
+    Playlist *playlist = [[Playlist alloc] initWithIndex: 0];
+    self.playlistImageView0.image = playlist.playlistIcon;
+
 
 
 }
@@ -32,7 +36,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqual:@"showPlaylistDeteil"]) {
         PlaylistDetailViewController *playlistDetailViewController = (PlaylistDetailViewController *) segue.destinationViewController;
-        playlistDetailViewController.segueLabelText = @"You pressed button";
+        playlistDetailViewController.playlist = [[Playlist alloc] initWithIndex:0];
+        
     }
 }
 
